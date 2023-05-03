@@ -1,10 +1,39 @@
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     setTimeout(ditchSplash, 4000);
+    beginDraw = false;
+
+    circles = [
+        {
+            name: "Projects",
+            x: window.innerWidth / 2,
+            y: window.innerHeight / 2,
+            size: 0.00,
+            sizeMax: 50,
+            growthRate: .15,
+            color: 'blue',
+            draw: standardDraw
+        },
+        {
+            name: "Ideas",
+            x: window.innerWidth / 2 + Math.floor(Math.random() * 100) + 200,
+            y: window.innerHeight / 2 + Math.floor(Math.random() * 100) + 200,
+            size: 0.00,
+            sizeMax: 25,
+            growthRate: .15,
+            color: 'red',
+            draw: standardDraw
+        }
+    ];
 }
 
 function draw() {
-    background(220);
+    if (beginDraw) {
+        background(240, 255, 240);
+        circles.forEach(element => {
+            element.draw();
+        });
+    }
 }
 
 function ditchSplash() {
@@ -26,7 +55,11 @@ function ditchSplash() {
     setTimeout(() => {
         fadeElementOut(P);
         fadeElementOut(secondP);
+        setTimeout(() => {
+            beginDraw = true;
+        }, 1000);
     }, 1000)
+
 }
 
 function fadeElementOut(fadeTarget) {
@@ -40,4 +73,12 @@ function fadeElementOut(fadeTarget) {
             clearInterval(fadeEffect);
         }
     }, 10);
+}
+
+function standardDraw() {
+    fill(this.color);
+    if (this.size < this.sizeMax) {
+        this.size += this.growthRate;
+    }
+    circle(this.x, this.y, this.size);
 }
