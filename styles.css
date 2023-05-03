@@ -24,92 +24,80 @@ body {
 	padding: 0 0 0 0;
 }
 
-@keyframes l1-animate {
-	0% {color: red; opacity: 0;}
-	14.28% {color: orange;}
-	28.56% {color: yellow} 
-	42.84% {color: green}
-	57.12% {color: blue}
-	71.40% {color: indigo}
-	85.68% {color: violet; opacity: 1;}
+@keyframes animate {
+	0% {
+		color: red;
+		opacity: 0;
+	}
+
+	14.28% {
+		color: orange;
+	}
+
+	28.56% {
+		color: yellow
+	}
+
+	42.84% {
+		color: green
+	}
+
+	57.12% {
+		color: blue
+	}
+
+	71.40% {
+		color: indigo
+	}
+
+	85.68% {
+		color: black;
+		opacity: 1;
+	}
 }
 
 #l1 {
-	animation: l1-animate;
+	animation: animate;
 	animation-duration: 3s;
-	color: violet;
+	color: black;
 	border: 2px solid;
 }
 
-@keyframes l2-animate {
-	0% {color: red; display: none;}
-	14.28% {color: orange;}
-	28.56% {color: yellow} 
-	42.84% {color: green}
-	57.12% {color: blue}
-	71.40% {color: indigo}
-	85.68% {color: violet; display: inline;}
-}
 
 #l2 {
-	animation: l2-animate;
-	animation-duration: 3s;
-}
-
-@keyframes l3-animate {
-	from {color: yellow}
-	to {color: green}
+	animation: animate;
+	animation-duration: 1s;
 }
 
 #l3 {
-	animation: l3-animate;
+	animation: animate;
 	animation-duration: 1s;
-}
-
-@keyframes l4-animate {
-	:w
-	from {color: green}
-	to {color: blue} 
 }
 
 #l4 {
-	animation: l4-animate;
+	animation: animate;
 	animation-duration: 1s;
 }
 
-@keyframes l5-animate {
-	0% {color: red; opacity: 0;}
-	14.28% {color: orange;}
-	28.56% {color: yellow} 
-	42.84% {color: green}
-	57.12% {color: blue}
-	71.40% {color: indigo}
-	85.68% {color: violet; opacity: 1;}
-}
 
 #l5 {
-	animation: l5-animate;
+	animation: animate;
 	animation-duration: 3s;
 	border: 2px solid;
-	color: violet;
-}
-
-@keyframes l6-animate {
-	from { color: indigo }
-	to { color: violet}
+	color: black;
 }
 
 #l6 {
-	animation: l6-animate;
-	animation-duration : 1s;
+	animation: animate;
+	animation-duration: 1s;
 }
 
 #l7 {
-	animation: l1-animate;
+	animation: animate;
 	animation-duration: 1s;
 }
 
 #l8 {
-	animation: l2-animate;
+	animation: animate;
 	animation-duration: 1s;
 }
