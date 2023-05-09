@@ -1,7 +1,7 @@
 html {
 	font-family: helvetica;
 	font-weight: bold;
-	background: #F0FFF0;
+	background: rgb(0, 0, 0);
 	color: #191970;
 }
 
@@ -59,7 +59,7 @@ body {
 #l1 {
 	animation: animate;
 	animation-duration: 3s;
-	color: black;
+	color: white;
 	border: 2px solid;
 }
 
@@ -84,7 +84,7 @@ body {
 	animation: animate;
 	animation-duration: 3s;
 	border: 2px solid;
-	color: black;
+	color: white;
 }
 
 #l6 {
